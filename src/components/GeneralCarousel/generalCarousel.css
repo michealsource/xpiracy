@@ -1,0 +1,26 @@
+.slider {
+  height: 250px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+.slider-track {
+  display: flex;
+  width: calc(250px * 10);
+}
+.slide {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.slide img {
+  width: 100%;
+}

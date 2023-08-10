@@ -1,0 +1,30 @@
+/* for desktop */
+@media screen and (min-width: 768px) {
+    /* #mobile-payitforward{
+        display: none !important;
+    } */
+}
+
+/* for mobile */
+@media screen and (max-width: 768px) {
+    /* #desktop-payitforward{
+        display: none !important;
+    } */
+
+    /* #mobile-payitforward {
+        display: block;
+        height: 200px;
+    } */
+
+    #community-content-bg-container {
+        height: 60vh !important;
+    }
+    #community-wrap1{
+        display: block !important;
+    }
+    #community-thanks-yn-btn{
+        /* font-size: 8px !important; */
+        /* word-break: keep-all; */
+        margin-top: 12px;
+    }
+}

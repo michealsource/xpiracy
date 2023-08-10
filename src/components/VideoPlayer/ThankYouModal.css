@@ -1,0 +1,37 @@
+.TYM-Cover{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    /* align-items: ; */
+    z-index: 9999999999;
+    width: 100%;
+    height: 100vh;
+    padding-top: 7%;
+}
+
+.TYM-Container{
+    position: relative;
+    width: 80%;
+    max-width: 300px;
+    background-color: white;
+    min-height: 420px;
+    max-height: 50%;
+    padding: 3%;
+    border-radius: 12px;
+}
+
+#tyn-textarea, #tyn-textarea:focus{
+    border: 1px solid #EB440F !important;
+    outline: 1px solid #EB440F !important;
+}
+
+#tyn-checkbox, #tyn-checkbox:checked{
+    border: 1px solid #EB440F !important;
+    background-color: #EB440F !important;
+    color: #EB440F !important;
+}

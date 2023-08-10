@@ -1,0 +1,78 @@
+.videoWrapper {
+  position: relative;
+}
+
+.controls-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 999 !important;
+}
+
+.btn-expand {
+  background-color: red;
+  padding: 10px;
+  color: #fff;
+}
+
+.pn {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.pn * {
+  color: white;
+}
+
+.pn .btn-pn {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 7px;
+  font-size: 18px;
+}
+
+.commentContainer {
+  max-height: 400px;
+  /* background-color: red; */
+  overflow: auto;
+}
+
+.no-img {
+  background: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ptf */
+
+.ptf-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: rgba(0, 0, 0, 0.4); */
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999 !important;
+  /* padding: 0px 15%; */
+}
+
+@media only screen and (max-width: 768px) {
+  #hide-small-text-1 {
+    display: none;
+  }
+}

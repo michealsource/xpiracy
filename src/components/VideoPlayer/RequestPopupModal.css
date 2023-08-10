@@ -1,0 +1,26 @@
+.POP-Cover{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    /* align-items: ; */
+    z-index: 9999999999;
+    width: 100%;
+    height: 100vh;
+    padding-top: 15%;
+}
+
+.POP-Container{
+    position: relative;
+    width: 80%;
+    max-width: 280px;
+    background-color: white;
+    min-height: 180px;
+    max-height: 10%;
+    padding: 2%;
+    border-radius: 12px;
+}

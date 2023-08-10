@@ -1,0 +1,57 @@
+.auth-modal-cover {
+  background-color: black;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+}
+
+.auth-modal-container {
+  background-color: white;
+  padding: 28px;
+  border-radius: 8px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-modal-title {
+  color: #000;
+  text-align: center;
+  /* font-family: Futura PT Cond; */
+  font-size: 28.9px;
+  /* font-style: normal; */
+  font-weight: 700;
+  /* line-height: 20.239px; 70.03% */
+  /* letter-spacing: -1.156px; */
+}
+
+.auth-modal-subtitle {
+  color: #000;
+  /* font-family: Poppins; */
+  font-size: 16px;
+  /* font-style: normal; */
+  font-weight: 400;
+  text-align: center;
+  line-height: normal;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+.social-img {
+  width: 19px;
+  height: 19px;
+  display: inline-block;
+  /* margin-right: 9px; */
+}
+
+@media only screen and (max-width: 768px) {
+  .auth-modal-cover {
+    width: 100vw;
+    height: 100vh;
+  }
+}

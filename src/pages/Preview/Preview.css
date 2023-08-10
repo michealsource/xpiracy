@@ -1,0 +1,45 @@
+.custom-focus-cover{
+    /* background-image: url(''); */
+    background: #CBC5B6 url('../../assets/images/sheep1.png') no-repeat 0px 0px;
+    background-size: contain;
+    height: 60vh;
+}
+.custom-focus{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.36);
+}
+
+.custom-content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15%;
+}
+
+.custom-content-container h3{
+    font-weight: 700;
+    color: #131313;
+    font-size: 24px;
+    font-family: Futura BdCn BT;
+    line-height: 7.729px;
+    /* letter-spacing: -2.56px; */
+}
+
+.custom-content-container .badge{
+    width: 61.644px;
+    height: 22.5px;
+    flex-shrink: 0;
+    border-radius: 12.235px;
+    /* opacity: 0.30000001192092896; */
+    background: rgba(0, 0, 0, 0.26);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.custom-content-container .badge div{
+    color: #121212;
+    font-weight: 600;
+}
