@@ -18,17 +18,17 @@ const ViewThankYouPage = () => {
     dispatch(getCommunityAction());
   }, []);
 
-  useEffect(()=>{
-    if(firstCall.current == 0){
-      autoFillWithStep()
+  useEffect(() => {
+    if (firstCall.current == 0) {
+      autoFillWithStep();
     }
 
     firstCall.current = 1;
-  }, [community])
+  }, [community]);
 
-  const autoFillWithStep = ()=>{
-    if(data.length == community.length){
-      return ;
+  const autoFillWithStep = () => {
+    if (data.length == community.length) {
+      return;
     }
 
     const tmp = [];
@@ -37,52 +37,40 @@ const ViewThankYouPage = () => {
       const element = community.thanksNote[i];
 
       console.log(i);
-      
-      if(element == undefined){
+
+      if (element == undefined) {
         continue;
       }
 
       tmp.push(element);
     }
     setlastIndex(stopIndex);
-    setData([
-      ...data,
-      ...tmp
-    ])
-  }
+    setData([...data, ...tmp]);
+  };
 
   return (
-    <div className="px-56 w-full pt-[40px]">
+    <div className="md:mx-20 mx-10 w-full  pt-[40px]">
       <div className="flex items-center">
-        <h3 className="text-[#ffff] text-[30px] mr-5">JOIN US</h3>
-        <img src={question} alt="" className="w-[30px] h-[30px]" />
+        <h3 className="text-[#ffff] text-[30px] mr-5">THANK YOU NOTE</h3>
       </div>
       <p className="text-[#ffff] text-[14px]">
         View thank yous from over {community.thanksNote.length + 3} people
       </p>
-
       {/* <div style={{ maxHeight: 400, overflow: 'auto', marginBottom: 30 }}> */}
-      <div style={{ overflow: 'auto', marginBottom: 30 }}>
-        {(data).map((item, i) => (
+      <div style={{ overflow: "auto", marginBottom: 30 }}>
+        {data.map((item, i) => (
           <SingleThankYou data={item} key={i} />
         ))}
       </div>
-
-      {
-        (
-          data.length != community.thanksNote.length
-        ) && (
-          <AppBtn
-            title="See More"
-            onClick={()=> autoFillWithStep()}
-            className="bg-[#EB440F] mx-4 text-[16px] text-[#fff] font-medium py-5 p-3 px-5 rounded-[20px] "
-          />
-        )
-      }
-
+      {data.length != community.thanksNote.length && (
+        <AppBtn
+          title="See More"
+          onClick={() => autoFillWithStep()}
+          className="bg-[#EB440F] mx-4 text-[16px] text-[#fff] font-medium py-5 p-3 px-5 rounded-[20px] "
+        />
+      )}
       <br />
       &nbsp;
-
       {/* <SingleThankYou />
       <SingleThankYou />
       <SingleThankYou />

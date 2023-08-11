@@ -153,7 +153,16 @@ function DesktopHeader() {
       <div id="mobile-header">
         <FaBell color="white" size={29} />
         <h2>XPIRACY</h2>
-        <FaUser color="white" size={29} onClick={() => navigate(userLink)} />
+        {isSignedIn ? (
+          <Link
+            to="/profile"
+            className="border-[1px] w-[30px] h-[30px] text-center rounded-[50%] p-2 border-[#EB440F] text-white"
+          >
+            {userData?.user?.email[0] || "A"}
+          </Link>
+        ) : (
+          <FaUser color="white" size={29} onClick={() => navigate(userLink)} />
+        )}
       </div>
     </div>
   );

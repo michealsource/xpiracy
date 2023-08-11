@@ -132,7 +132,7 @@ function Profile() {
                   </h2>
                 </div>
                 <div className="bg-[#D9D9D9] text-[#000] px-10 pt-5 rounded-2xl h-[70px]">
-                  <h6 className="text-base font-normal">Thank yous recieved</h6>
+                  <h6 className="text-base font-normal">Thank you recieved</h6>
                   <h2 className="font-bold text-xl">
                     {profileData?.myThankYouNoteCount || "0"}
                   </h2>

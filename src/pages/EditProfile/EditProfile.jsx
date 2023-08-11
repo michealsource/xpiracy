@@ -127,7 +127,7 @@ function EditProfile() {
   return (
     <div className="px-20  pt-14">
       {loading && <Loader />}
-      <div className="flex flex-col  justify-center w-1/3 mb-40 mx-auto mt-10">
+      <div className="flex flex-col  justify-center md:w-1/3 w-[100%] mb-40 mx-auto mt-10">
         <h3 className="text-[#fff] text-5xl ">Edit Profile</h3>
 
         <div className="flex items-center gap-10 mt-10">
