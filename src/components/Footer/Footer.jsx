@@ -19,20 +19,20 @@ const Footer = () => {
     {
       name: "Watch",
       link: "/",
-      icon: <FaYoutube size={40} color="white" />,
-      iconActive: <FaYoutube size={40} color="#EB440F" />,
+      icon: <FaYoutube size={30} color="white" />,
+      iconActive: <FaYoutube size={30} color="#EB440F" />,
     },
     {
       name: "Pay It Forward",
       link: "/payFwd",
-      icon: <FaPrayingHands size={40} color="white" />,
-      iconActive: <FaPrayingHands size={40} color="#EB440F" />,
+      icon: <FaPrayingHands size={30} color="white" />,
+      iconActive: <FaPrayingHands size={30} color="#EB440F" />,
     },
     {
       name: "Community",
       link: "/community",
-      icon: <MdGroups size={40} color="white" />,
-      iconActive: <MdGroups size={40} color="#EB440F" />,
+      icon: <MdGroups size={30} color="white" />,
+      iconActive: <MdGroups size={30} color="#EB440F" />,
     },
   ];
 

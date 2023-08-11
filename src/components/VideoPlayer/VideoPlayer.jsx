@@ -624,7 +624,7 @@ function VideoPlayer() {
         </div>
       </div>
 
-      <div className="flex justify-between items-cente px-20 mt-5">
+      <div className="md:flex justify-between hidden  items-cente px-20 mt-5">
         <div
           className="flex items-center text-[14px] cursor-pointer"
           // onClick={() => navigate("/comment")}
@@ -667,7 +667,7 @@ function VideoPlayer() {
         </div>
 
         <div
-          className="flex items-center w-[160px] justify-center text-center rounded-[12px] ml-5 p-5 cursor-pointer"
+          className="flex items-center  w-[160px] justify-center text-center rounded-[12px] ml-5 p-5 cursor-pointer"
           style={{ backgroundColor: "rgba(233, 60, 36, 1)" }}
           onClick={() => navigate("/payFwd")}
         >
@@ -695,6 +695,73 @@ function VideoPlayer() {
           </div>
         )}
       </div>
+
+      <div className="w-[100%] md:hidden flex justify-between items-center px-20">
+        <div className="flex  text-[14px] cursor-pointer">
+          <BsFillChatLeftTextFill color="#fff" size={20} />
+          <span className="text-[#fff] ml-5"> {commentList.length} </span>
+        </div>
+
+        {heatMapValue > 0.1 && (
+          <div className="flex items-center ml-10">
+            <span className="text-[#EB440F] mr-5 text-[12px] inline-block ">
+              Heatmap
+            </span>
+            <Slider
+              sx={{
+                width: 50,
+                color:
+                  heatMapValue > 0.5
+                    ? "rgb(235, 68, 15, " + heatMapValue + ")"
+                    : "white",
+                marginLeft: "5px",
+              }}
+              value={heatMapValue * 100}
+              min={0}
+              max={100}
+            />
+          </div>
+        )}
+      </div>
+
+      <div className="w-[100%] md:hidden flex mt-5 justify-between items-center px-10">
+        <div className="text-[#fff] flex items-center text-lg">
+          <div className="flex flex-col">
+            <span className="text-lg">WATCHING NOW</span>
+            <img src={line} alt="" />
+          </div>
+
+          <div className="w-[38px] h-[20px] bg-[#DEE5D3] p-3 flex items-center justify-center rounded-xl ml-5 text-[#000]">
+            <span>{watchingNow || 0}</span>
+          </div>
+        </div>
+
+        {/* <div className="text-[#fff] text-[14px] mx-8">ABOUT</div> */}
+
+        <div
+          className="text-[#fff] ml-3 text-lg cursor-pointer mt-5"
+          onClick={() => navigate("/extended-review")}
+        >
+          EXTENDED INTERVIEW
+        </div>
+      </div>
+
+      <div className="w-[100%] md:hidden flex  justify-between items-center mt-10 px-10">
+        <div className="flex items-center w-[170px] text-[#fff]">
+          <span className="text-sm">
+            Pay it forward to help create future films and further impact.
+          </span>
+        </div>
+
+        <div
+          className="flex items-center  w-[160px] justify-center text-center rounded-[12px] ml-5 p-5 cursor-pointer"
+          style={{ backgroundColor: "rgba(233, 60, 36, 1)" }}
+          onClick={() => navigate("/payFwd")}
+        >
+          <span className="text-[#fff] text-3xl">Pay it Forward</span>
+        </div>
+      </div>
+
       <div className="flex px-40 mb-20">
         <template id="my-template">
           <swal-title>Save changes to "Untitled 1" before closing?</swal-title>
@@ -735,7 +802,7 @@ function VideoPlayer() {
             </div>
 
             {isLoggedIn ? (
-              <div className="w-[60%] mt-6 max-w-3xl items-center border-[#fff] border-[1px] rounded-[15px] h-[40px] bg-[#000] relative flex">
+              <div className=" md:w-[60%] w-[90%] mt-6 max-w-3xl items-center border-[#fff] border-[1px] rounded-[15px] h-[40px] bg-[#000] relative flex">
                 <input
                   type="text"
                   value={comment}

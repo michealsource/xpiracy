@@ -84,3 +84,11 @@ button[disabled] {
     background-color: #f9f9f9;
   }
 }
+
+@media (max-width: 750px) {
+  .content2 {
+    max-height: 85px;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+}

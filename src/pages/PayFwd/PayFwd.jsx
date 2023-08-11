@@ -86,13 +86,13 @@ const PayFwd = () => {
 
       const payload = {
         mode,
-        numberOfPeople: (numPPl != null) ? `${numPPl}` : `${numberOfPpl}`,
+        numberOfPeople: numPPl != null ? `${numPPl}` : `${numberOfPpl}`,
         movieId,
         ipAddress: ipv4,
         successUrl,
         cancelUrl,
         email,
-        ...(amount != null ? {amount} : {})
+        ...(amount != null ? { amount } : {}),
       };
 
       console.log(payload);
@@ -193,11 +193,11 @@ const PayFwd = () => {
   return (
     <>
       {loading && <Loader />}
-      <div id="desktop-payitforward" className="mb-56  w-4/5  mx-auto">
-        <h4 className="text-white text-5xl font-semibold mt-10 ">
+      <div className="mb-56  w-4/5  mx-auto">
+        <h4 className="text-white md:text-5xl text-4xl  font-semibold mt-10 ">
           Pay it forward to Christspiracy
         </h4>
-        <div className="flex mt-20 gap-56 ">
+        <div className="flex md:flex-row flex-col mt-20 gap-56 ">
           <div className="text-white flex-1">
             <div
               ref={playerContainerRef}
@@ -373,9 +373,9 @@ const PayFwd = () => {
             </div>
           </div> */}
 
-          <div className="text-white h-[600px] overflow-y-auto flex-1">
-            <h4 className="text-2xl"> What is Pay it Forward?</h4>
-            <p className="text-lg w-[300px] mt-5">
+          <div className="text-white md:mt-5 -mt-32 h-[600px] overflow-y-auto flex-1">
+            <h4 className="text-4xl"> What is Pay it Forward?</h4>
+            <p className="text-xl w-[300px] mt-5">
               Christspiracy shows are free for viewers around the world, and we
               intend to keep it that way. But it takes millions of dollars to
               produce high-quality content. That’s where you come in. Here are a
@@ -417,15 +417,23 @@ const PayFwd = () => {
                     <div className="flex gap-10 mt-5">
                       <AppBtn
                         className="border-[#EB440F] hover:bg-[#EBEBEB] mt-2 text-[12px] text-center items-center justify-center  w-full  text-[#black] py-3 p-3 px-5 rounded-[12px] "
-                        onClick={()=>{
-                          processPTF('subscription', parseInt((item.amount).replace("$", "")), item.processingPpl );
+                        onClick={() => {
+                          processPTF(
+                            "subscription",
+                            parseInt(item.amount.replace("$", "")),
+                            item.processingPpl
+                          );
                         }}
                         title="Monthly"
                       />
                       <AppBtn
                         className="border-[#EB440F] hover:bg-[#EBEBEB] mt-2 text-[12px] text-center items-center justify-center  w-full  text-[#black] py-3 p-3 px-5 rounded-[12px] "
-                        onClick={()=>{
-                          processPTF('payment', parseInt((item.amount).replace("$", "")), item.processingPpl );
+                        onClick={() => {
+                          processPTF(
+                            "payment",
+                            parseInt(item.amount.replace("$", "")),
+                            item.processingPpl
+                          );
                         }}
                         title="One Time"
                       />
@@ -447,8 +455,8 @@ const PayFwd = () => {
         </div>
       </div>
 
-      <div id="mobile-payitforward">
-        {/* .. */}
+      {/* <div id="mobile-payitforward">
+      
         <div className="mt-[40px] px-28">
           <div className="flex flex-col">
             <div className="flex items-center">
@@ -528,8 +536,8 @@ const PayFwd = () => {
             </div>
           </div>
         </div>
-        {/* ... */}
-      </div>
+       
+      </div> */}
     </>
   );
 };
